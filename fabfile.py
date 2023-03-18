@@ -14,4 +14,5 @@ def ssh_host(ctx):
         connect_kwargs={"key_filename": "~/.ssh/your_key"}
     ) as c:
         with c.cd("/home/project/path/"):
-            c.run("ls")
+            output = c.run("ls")
+            print("std-out:", output)

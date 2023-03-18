@@ -7,7 +7,7 @@ def hello(ctx):
 
 
 @task
-def deploy(ctx):
+def ssh_host(ctx):
     with Connection(
         "HOST",
         user="USERNAME",
